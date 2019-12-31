@@ -1,0 +1,622 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <style>
+    /*
+    COLORS
+    Find and replace the values below to change the color:
+    Page Background - #333333
+    Container Backgrounds - #eeeeee
+    Footer Background - #cccccc
+    Horizontal Lines - #999999
+    Headlines - #888888
+    Body Copy - #777777
+    Images - #666666
+    Buttons - #ff6600
+    */
+    body {
+      background-color: #ffffff;
+      margin:0;
+      padding:0;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    .ReadMsgBody {
+      width: 100%;
+      background-color: #ffffff;
+    }
+    /* Removes underline for hyperlinked text in Windows 10 Mail */
+    a {
+      text-decoration:none;
+    }
+    /* Stops email clients resizing small text. */
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      box-sizing: border-box;
+    }
+    /* Stops Outlook from adding extra spacing to tables. */
+    table, td {
+      border-collapse: collapse;
+      margin: 0px auto;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    /* Outlook Webmail App specific code that forces columns to be the correct width. */
+    [owa] .onecolumn1 {
+      max-width: 600px!important;
+    }
+    [owa] .onecolumn2 {
+      max-width: 300px!important;
+    }
+    [owa] .onecolumn3 {
+      max-width: 200px!important;
+    }
+    [owa] .onecolumn4 {
+      max-width: 150px!important;
+    }
+    [owa] .column600 {
+      max-width: 600px!important;
+    }
+    [owa] .column400 {
+      max-width: 400px!important;
+    }
+    [owa] .column300 {
+      max-width: 300px!important;
+    }
+    [owa] .column200 {
+      max-width: 200px!important;
+    }
+    [owa] .column150 {
+      max-width: 150px!important;
+    }
+    /* Fixes Outlook Webmail App line height and display button issues */
+    .button {
+      display:inline-block!important;
+      line-height:60px!important;
+    }
+    .button60 {
+      display:inline-block!important;
+      line-height:60px!important;
+    }
+    .button40 {
+      display:inline-block!important;
+      line-height:40px!important;
+    }
+    .button30 {
+      display:inline-block!important;
+      line-height:30px!important;
+    }
+    .image-responsive {
+      width: 100%;
+    }
+    @media only screen and (min-width: 660px)  {
+      .container {
+        max-width: 620px;
+      }
+      /* Force a max-width on columns in desktop view*/
+      .column600 {
+        max-width: 600px!important;
+      }
+      .column400 {
+        max-width: 400px!important;
+      }
+      .column300 {
+        max-width: 300px!important;
+      }
+      .column200 {
+        max-width: 200px!important;
+      }
+      .column150 {
+        max-width: 150px!important;
+      }
+    }
+    @media only screen and (min-width: 640px) {
+      .container {
+        max-width: 620px;
+      }
+      /* Force a max-width on columns in desktop view*/
+      .onecolumn1 {
+        max-width: 600px!important;
+      }
+      .onecolumn2 {
+        max-width: 300px!important;
+      }
+      .onecolumn3 {
+        max-width: 200px!important;
+      }
+      .onecolumn4 {
+        max-width: 150px!important;
+      }
+    }
+    @media only screen and (max-width: 640px) {
+      .container {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .onecolumn1 {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .onecolumn2 {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .onecolumn3 {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .onecolumn4 {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .image-responsive {
+        width: 100%!important;
+        min-width: 100%!important;
+        max-width:100%!important;
+      }
+      /* Basic Styles */
+      .center {
+        text-align: center!important;
+      }
+      .hideformobile {
+        display:none!important;
+      }
+    }
+    @media only screen and (max-width: 768px)  {
+      .container {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .buttoncontainer {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+      }
+      .column600 {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .column400 {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .column300 {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .column200 {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .column150 {
+        width:100%!important;
+        min-width:100%!important;
+        max-width:100%!important;
+        display: -moz-inline-stack;
+      }
+      .image-responsive {
+        width: 100%!important;
+        min-width: 100%!important;
+        max-width:100%!important;
+        height: auto!important;
+      }
+      .video-responsive {
+        height: auto!important;
+      }
+      /* Basic Styles */
+      .center {
+        text-align: center!important;
+      }
+      .hideformobile {
+        display:none!important;
+      }
+      .autoheight {
+        height:auto!important
+      }
+    }
+  </style>
+</head>
+<body style="box-sizing: border-box; background-color: #ffffff; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; -webkit-font-smoothing: antialiased; text-size-adjust: 100%;">
+  <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; border-color: #808080;">
+    <tbody style="text-size-adjust: 100%; box-sizing: border-box; border-color: #808080;">
+      <tr style="text-size-adjust: 100%; box-sizing: border-box; border-color: #808080;">
+        <td width="100%" valign="top" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 0px 20px 0px 20px; background-color: #FFFFFF;" bgcolor="#FFFFFF">
+          <!--[if (gte mso 9)|(IE)]><table width="620" align="center" cellpadding="0" cellspacing="0" border="0" style="width:465pt"><tbody><tr><td><![endif]-->
+          <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" blocklabel="PS_button" class="c46523 c157357861322000-9319871618599174" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+            <tbody class="c46531 c157357861322010-9136319160992568" style="text-size-adjust: 100%; box-sizing: border-box;">
+              <tr class="c46539 c157357861322020-12393332683022851" style="text-size-adjust: 100%; box-sizing: border-box;">
+                <td bgcolor="#13294b" width="100%" valign="top" class="c46547 c157357861322030-07513784123432865" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 0px 20px 0px 20px;">
+                  <!--[if (gte mso 9)|(IE)]>
+<table width="620" align="center" cellpadding="0" cellspacing="0" border="0" style="width:465pt">
+<tbody>
+<tr>
+<td>
+<![endif]-->
+                  <!--======== PREHEADER ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" blocklabel="PS_pre-header" class="c46573 c157357861322060-8537310957861326" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c46581 c157357861322070-5614606484469828" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c46589 c157357861322080-6219782578048214" style="text-size-adjust: 100%; box-sizing: border-box;">
+                        <td class="c46597 c157357861322090-34130600461101257" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                          <!-- Container -->
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="container c46614 c1573578613220110-8097015000317656" style="text-size-adjust: 100%; box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; max-width: 620px; width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                            <tbody class="c46622 c1573578613220120-5396878302038883" style="text-size-adjust: 100%; box-sizing: border-box;">
+                              <tr class="c46630 c1573578613220130-5506014570500406" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                <td width="620" align="center" class="container c46638 c1573578613220140-2519944041823343" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 0px; font-size: 0px; text-align: center;">
+                                  <!-- Content -->
+                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="c46655 c1573578613220160-7559009593273065" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                                    <tbody class="c46663 c1573578613220170-9859158291069072" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                      <tr class="c46671 c1573578613220180-5348301776921065" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                        <td align="center" class="c46679 c1573578613220190-14197949359121842" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 10px 20px 10px 20px; text-align: center; font-family: Arial, sans-serif; font-size: 10px; color: #FFFFFF; font-style: italic;">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- Content -->
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- End Container -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== PREHEADER ===========-->
+                  <!--======== LOGO ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" blocklabel="PS_logo" class="c46856 c1573578613220250-5736793566232901" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c46864 c1573578613220260-2967014293396899" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c46872 c1573578613220270-15220201009447676" style="text-size-adjust: 100%; box-sizing: border-box;">
+                        <td class="c46880 c1573578613220280-9741605019090234" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                          <!-- Container -->
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="container c46897 c1573578613220300-9484665214855503" style="text-size-adjust: 100%; box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; max-width: 620px; width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                            <tbody class="c46905 c1573578613220310-2540787914641751" style="text-size-adjust: 100%; box-sizing: border-box;">
+                              <tr class="c46913 c1573578613220320-2976372241761813" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                <td width="620" bgcolor="#FFFFFF" align="center" class="container c46921 c1573578613220330-5444058805671028" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 0px; font-size: 0px; text-align: center;">
+                                  <!-- Content -->
+                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="c46938 c1573578613220350-38210860388611567" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                                    <tbody class="c46946 c1573578613220360-8836454320476781" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                      <tr class="c46954 c1573578613220370-30538663910346386" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                        <td align="center" class="c46962 c1573578613220380-15998143187535718" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 30px 20px 30px 20px; text-align: center;">
+                                          <a href="https://www.pinkshell.com/" target="_blank" class="c46970 c1573578613220390-5654187157746129" style="text-size-adjust: 100%; box-sizing: border-box; text-decoration-line: none; text-decoration-style: initial; text-decoration-color: initial;"><img width="200" border="0" src="https://www.thenavisway.com/Narrowcast/ImageLibrary/14402/PS_MASTER_LC_logo.png" alt class="c46974 c1573578613220400-2644761782123983" style="text-size-adjust: 100%; box-sizing: border-box; border: 0; display: inline-block; min-width: 200px; width: 200px;"></a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- Content -->
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- End Container -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== LOGO ===========-->
+                  <!--======== FULL WIDTH IMAGE ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" blocklabel="PS_banner-image" class="c47151 c1573578613220450-5862479459157215" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c47159 c1573578613220460-6634815638058382" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c47167 c1573578613220470-33579330622733705" style="text-size-adjust: 100%; box-sizing: border-box;">
+                        <td class="c47175 c1573578613220480-05046843773084708" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                          <!-- Container -->
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="container c47192 c1573578613220500-11533120898746363" style="text-size-adjust: 100%; box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; max-width: 620px; width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                            <tbody class="c47200 c1573578613220510-5493077994680091" style="text-size-adjust: 100%; box-sizing: border-box;">
+                              <tr class="c47208 c1573578613220520-248674474046076" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                <td width="620" bgcolor="#FFFFFF" align="center" class="container c47216 c1573578613220530-9027208481832216" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 0px; font-size: 0px; text-align: center;">
+                                  <!-- Content -->
+                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="c47233 c1573578613220550-07421511872746134" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                                    <tbody class="c47241 c1573578613220560-20019058778725873" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                      <tr class="c47249 c1573578613220570-3897395441410634" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                        <td align="center" class="imagecontainer c47257 c1573578613220580-5690251296941955" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 0px 0px 0px 0px; text-align: center;">
+                                          <img width="620" border="0" src="https://assets.navisperformance.com/Assets/14402/TD/Images/01012345-50f9-4597-8110-9ffb3ee804fa_PS_SC_Cancellation_banner_20181030170858.jpg" alt class="c47265 c1573578613220590-339100556741722" style="text-size-adjust: 100%; box-sizing: border-box; border: 0; display: block; max-width: 100%; width: 620px; height: auto;">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- Content -->
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- End Container -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== FULL WIDTH IMAGE ===========-->
+                  <!--======== HEADLINE ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" blocklabel="PS_headline" class="c47434 c1573578613220640-6247136773118207" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c47442 c1573578613220650-209173155149337" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c47450 c1573578613220660-2417268266453434" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== HEADLINE ===========-->
+                  <!--======== ONE COLUMN TEXT ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" blocklabel="PS_1col-text" class="c47719 c1573578613220830-12299332606229507" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c47727 c1573578613220840-6149692104429756" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c47735 c1573578613220850-86489133512651" style="text-size-adjust: 100%; box-sizing: border-box;">
+                        <td class="c47743 c1573578613220860-08058146604121941" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                          <!-- Container -->
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="container c47760 c1573578613220880-4106876642507358" style="text-size-adjust: 100%; box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; max-width: 620px; width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                            <tbody class="c47768 c1573578613220890-017452211931534567" style="text-size-adjust: 100%; box-sizing: border-box;">
+                              <tr class="c47776 c1573578613220900-48638451930111626" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                <td width="620" bgcolor="#FFFFFF" align="center" class="container c47784 c1573578613220910-3570336269090113" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 0px; font-size: 0px; text-align: center;">
+                                  <!-- Content -->
+                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="c47801 c1573578613220930-5843862604492236" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                                    <tbody class="c47809 c1573578613220940-8840194918589823" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                      <tr class="c47817 c1573578613220950-8245515398461685" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                        <td align="center" class="c47825 c1573578613220960-7075280567992277" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 40px 40px 0px 40px; font-weight: normal; text-align: center; font-family: Trebuchet MS, Arial, sans-serif; font-size: 16px; color: #424242; line-height: 22px;">
+                                          <div class="c47833 c1573578613220970-6196902955734238" style="text-size-adjust: 100%; box-sizing: border-box; text-align: left;">
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">Dear Guests of Pink Shell,
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">
+                                              <br style="text-size-adjust: 100%; box-sizing: border-box;">
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">As we strive to consistently provide the best resort accommodation in Florida, we are excited to announce there will be scheduled updates and enhancements of the White Sands Octopool. This project will begin December 9th and conclude December 16th of 2019. Once completed, the Octopool will have new heating and filtration, a resurfaced interior, and underwater speakers that when swimming under water, you’ll hear music playing.
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">
+                                              <br style="text-size-adjust: 100%; box-sizing: border-box;">
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">To accommodate these enhancements, the Octopool and the pool deck area of the White Sands building will be closed during this time. Our goal is to complete this project as seamlessly as possible while enhancing the overall appearance of the Octopool. All other outlets of the resort will be open and will not be affected by this project.
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">
+                                              <br style="text-size-adjust: 100%; box-sizing: border-box;">
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">During this time, the Sanibel View pool will be open to guests of all ages. From this area, we will offer an outdoor grill with a special menu, bar service, and towel service. You will also be able to enjoy live music and a variety of activities and events for both children and adults.
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">Activities, along with food and beverage service, will also be available on the beach.
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">
+                                              <br style="text-size-adjust: 100%; box-sizing: border-box;">
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">We appreciate your understanding. If you have any questions, please contact Neil Praznik, Director of Operations, by phone at 239-463-8676 or by email at npraznik@pinkshell.com.
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">
+                                              <br style="text-size-adjust: 100%; box-sizing: border-box;">
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">Warmest regards,
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">
+                                              <br style="text-size-adjust: 100%; box-sizing: border-box;">
+                                            </div>
+                                            <div style="text-size-adjust: 100%; box-sizing: border-box;">The Pink Shell Team
+                                            </div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- Content -->
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- End Container -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== ONE COLUMN TEXT ===========-->
+                  <!--======== BUTTON ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="c48002 c15735786132201020-9882313664999807" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c48010 c15735786132201030-7113094088944778" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c48018 c15735786132201040-8395289909378711" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== BUTTON ===========-->
+                  <!--======== HORIZONTAL LINE 20 ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c48373 c15735786132201270-5589350753464886" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c48381 c15735786132201280-4851457592003521" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c48389 c15735786132201290-8610294085388588" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== HORIZONTAL LINE 20 ===========-->
+                  <!--======== ONE COLUMN IMAGE + TEXT ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c48818 c15735786132201570-6223613756245794" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c48826 c15735786132201580-7888360190853312" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c48834 c15735786132201590-5206326040974838" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== ONE COLUMN IMAGE + TEXT ===========-->
+                  <!--======== HORIZONTAL LINE 20 ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c49535 c15735786132202020-20032448823220905" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c49543 c15735786132202030-4894832358838961" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c49551 c15735786132202040-30324649980870655" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== HORIZONTAL LINE 20===========-->
+                  <!--======== ONE ROW IMAGE + TEXT 1/2 ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c49872 c15735786132202240-40570548301965004" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c49880 c15735786132202250-5573667077408331" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c49888 c15735786132202260-8946383057422453" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== ONE ROW IMAGE + TEXT 1/2 ===========-->
+                  <!--======== HORIZONTAL LINE 20 ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c50822 c15735786132202830-22975217008065218" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c50830 c15735786132202840-8710472921966124" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c50838 c15735786132202850-8060232598691439" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== HORIZONTAL LINE 20===========-->
+                  <!--======== TWO COLUMN IMAGE + TEXT ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c51159 c15735786132203050-5306453930996147" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c51167 c15735786132203060-6377111155497865" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c51175 c15735786132203070-6688848210714171" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== TWO COLUMN IMAGE + TEXT ===========-->
+                  <!--======== HORIZONTAL LINE 20 ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c52413 c15735786132203820-05222450107005083" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c52421 c15735786132203830-14866039195319614" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c52429 c15735786132203840-9091514069263986" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== HORIZONTAL LINE 20===========-->
+                  <!--======== ONE ROW IMAGE + TEXT 1/3 ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c52750 c15735786132204040-20323288964860664" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c52758 c15735786132204050-6624469037486533" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c52766 c15735786132204060-10013145403983392" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== ONE ROW IMAGE + TEXT 1/3 ===========-->
+                  <!--======== HORIZONTAL LINE 20 ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c53700 c15735786132204630-7575259039539275" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c53708 c15735786132204640-9165461306794533" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c53716 c15735786132204650-7792600301080739" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== HORIZONTAL LINE 20===========-->
+                  <!--======== THREE COLUMN IMAGE + TEXT ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c54037 c15735786132204850-4792407647587873" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c54045 c15735786132204860-6116344593997463" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c54053 c15735786132204870-5396236684739737" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== THREE COLUMN IMAGE + TEXT ===========-->
+                  <!--======== HORIZONTAL INDENT LINE 40 ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c55826 c15735786132205940-9634503128092424" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c55834 c15735786132205950-8347822623448875" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c55842 c15735786132205960-2717245102963455" style="text-size-adjust: 100%; box-sizing: border-box;">
+                        <td class="c55850 c15735786132205970-7818532400346365" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                          <!-- Container -->
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="container c55867 c15735786132205990-13936499078872733" style="text-size-adjust: 100%; box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; max-width: 620px; width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                            <tbody class="c55875 c15735786132206000-26164767707477754" style="text-size-adjust: 100%; box-sizing: border-box;">
+                              <tr class="c55883 c15735786132206010-40998650045898244" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                <td width="620" bgcolor="#FFFFFF" align="center" class="container c55891 c15735786132206020-48233930089409816" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 0px; font-size: 0px; text-align: center;">
+                                  <!-- Content -->
+                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="c55908 c15735786132206040-17222170145120663" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                                    <tbody class="c55916 c15735786132206050-3550417973542752" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                      <tr class="c55924 c15735786132206060-8102105528149817" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                        <td align="center" class="c55932 c15735786132206070-06291097662929968" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 10px 40px 10px 40px; text-align: center;">
+                                          <table width="100" border="0" cellspacing="0" cellpadding="0" class="c55940 c15735786132206080-4015311867584237" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                                            <tbody class="c55948 c15735786132206090-3339901134896428" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                              <tr class="c55956 c15735786132206100-19930136218258454" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                                <td bgcolor="#13294b" height="5" class="c55964 c15735786132206110-6717139247053336" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; font-size: 5px; line-height: 5px;"> 
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- Content -->
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- End Container -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== HORIZONTAL INDENT LINE 40===========-->
+                  <!--======== SOCIAL MEDIA ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c56163 c15735786132206160-5691011339460599" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c56171 c15735786132206170-2888662218374818" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c56179 c15735786132206180-8423133460145746" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== SOCIAL MEDIA ===========-->
+                  <!--======== HORIZONTAL INDENT LINE 40 ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c56578 c15735786132206440-3608423472713218" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c56586 c15735786132206450-49415011499392447" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c56594 c15735786132206460-23823274584076426" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== HORIZONTAL INDENT LINE 40===========-->
+                  <!--======== FOOTER ===========-->
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" block-type="layout-block" class="c56915 c15735786132206660-001304340469185039" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                    <tbody class="c56923 c15735786132206670-19656837919847892" style="text-size-adjust: 100%; box-sizing: border-box;">
+                      <tr class="c56931 c15735786132206680-20856464253178397" style="text-size-adjust: 100%; box-sizing: border-box;">
+                        <td class="c56939 c15735786132206690-9490417194362404" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                          <!-- Container -->
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="container c56956 c15735786132206710-03143125208279862" style="text-size-adjust: 100%; box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; max-width: 620px; width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                            <tbody class="c56964 c15735786132206720-9295743019006306" style="text-size-adjust: 100%; box-sizing: border-box;">
+                              <tr class="c56972 c15735786132206730-48591465949699697" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                <td width="620" bgcolor="#FFFFFF" align="center" class="container c56980 c15735786132206740-9510770304586058" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 0px; font-size: 0px; text-align: center;">
+                                  <!-- Content -->
+                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="c56997 c15735786132206760-6079462472856285" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;">
+                                    <tbody class="c57005 c15735786132206770-5209697144147418" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                      <tr class="c57013 c15735786132206780-09172881093330165" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                        <td align="center" class="c57021 c15735786132206790-25165388839722724" style="text-size-adjust: 100%; box-sizing: border-box; border-collapse: collapse; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; padding: 40px 40px 40px 40px; text-align: center; font-family: Trebuchet MS, Arial, sans-serif; font-size: 14px; line-height: 18px; color: #333333;">
+                                          This email was sent to: %%CRMemail%%
+                                          <br class="c57038 c15735786132206810-29567910591667257" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                          <br class="c57047 c15735786132206820-831823198517905" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                          <a href="%%navis_subscription_center%%" target="_blank" class="c57056 c15735786132206830-6453786168499009" style="text-size-adjust: 100%; box-sizing: border-box; text-decoration-line: none; text-decoration-style: initial; text-decoration-color: initial; color: #ed9cad;">Unsubscribe</a> |
+                                          <a href="%%navis_subscription_center%%" target="_blank" class="c57070 c15735786132206850-712965387546435" style="text-size-adjust: 100%; box-sizing: border-box; text-decoration-line: none; text-decoration-style: initial; text-decoration-color: initial; color: #ed9cad;">Update Profile</a> |
+                                          <a href="%%view_email_url%%" target="_blank" class="c57084 c15735786132206870-4634830497992706" style="text-size-adjust: 100%; box-sizing: border-box; text-decoration-line: none; text-decoration-style: initial; text-decoration-color: initial; color: #ed9cad;">View Online</a>
+                                          <br class="c57089 c15735786132206880-4677291361880276" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                          <br class="c57098 c15735786132206890-22478022825266475" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                          This email was sent by: %%Member_Busname%%
+                                          <br class="c57116 c15735786132206910-18932798886777946" style="text-size-adjust: 100%; box-sizing: border-box;">
+                                          %%Member_Addr%% %%Member_City%%, %%Member_State%% %%Member_Country%% %%Member_PostalCode%%
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- Content -->
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- End Container -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--======== FOOTER ===========-->
+                  <!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</tbody>
+</table>
+<![endif]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--[if (gte mso 9)|(IE)]></td></tr></tbody></table><![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- </body> -->
